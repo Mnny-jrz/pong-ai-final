@@ -1,73 +1,70 @@
-# 🏓 Ping Pong AI (Python + Pygame)
+# 🏓 PingPong Rework
 
-A classic Pong game built with **Python** and **Pygame**, where you play against an AI opponent. Features adjustable difficulty levels, customizable ball size, and a simple start menu with settings. Smooth gameplay and responsive controls make it a fun project to learn game development.
+A classic Pong game built with **Python** and **Pygame**, reworked for my **Final Project**.  
+This version adds menus, difficulty selection, sound effects, and win/lose screens.  
+It also serves as a demonstration of **Object-Oriented Programming (OOP) concepts**: inheritance, polymorphism, abstraction, and encapsulation.
+
+---
 
 ## 🎮 Features
 
-- **AI Opponent with Difficulty Levels**
-  - Easy: slower reaction, larger error margin
+- **Game Modes**
+  - VS AI: play against a computer opponent
+  - 2 Player: play locally with a friend
+- **Difficulty Levels**
+  - Easy: slower AI reaction
   - Medium: balanced AI
   - Hard: fast and precise AI
-- **Settings Menu**
-  # 🏓 Ping Pong AI (Python + Pygame)
+- **Sound Effects**
+  - Ball hit, scoring, and win/lose sounds
+- **Win/Lose Screens**
+  - Displays messages when a player wins
+- **Restart Option**
+  - Reset scores and return to menu
 
-  A simple Pong clone written in Python using Pygame. Play against a prediction-based AI with configurable difficulty, ball size, and an adjustable win score.
+---
 
-  ## Features
+## 🎮 Controls
 
-  - Main menu with Play / Settings / Quit
-  - Adjustable difficulty (Easy / Medium / Hard) — affects AI speed, reaction and aiming error
-  - Adjustable ball size
-  - Adjustable win score (changeable from Settings)
-  - Pause (P), reset scores (R), and win screen when a player reaches the win score
-  - AI prediction that simulates the ball trajectory (including wall bounces) for smarter play
-  - Ball speed increases slightly on paddle hits (capped)
+- Player 1: ↑ (Up arrow) / ↓ (Down arrow)  
+- Player 2: W / S  
+- Restart: R  
+- Exit: Esc  
 
-  ## Controls
+---
 
-  - Move up: ↑ (Up arrow)
-  - Move down: ↓ (Down arrow)
-  - Pause / Resume: P
-  - Reset scores & ball: R
-  - Back / Exit to menu: Esc
+## 🧩 OOP Concepts Demonstrated
 
-  Settings menu keys (open from Main Menu → Settings):
-  - Change difficulty: ← / →
-  - Change ball size: ↑ / ↓
-  - Change win score: + / - (supports main keyboard and keypad)
+- **Encapsulation** → Ball speed variables are controlled only through collision logic.  
+- **Inheritance** → Paddles and ball use `pygame.Rect`, inheriting movement and collision methods.  
+- **Polymorphism** → `colliderect()` behaves differently depending on whether the ball hits a paddle or a wall.  
+- **Abstraction** → Helper functions like `draw_paddle()` hide drawing details and simplify code.
 
-  ## Requirements
+---
 
-  - Python 3.8+
-  - pygame
+## 📂 Installation & Usage
 
-  Install pygame with pip if you don't have it:
+### Requirements
+- Python 3.8+  
+- pygame  
 
-  ```bash
-  python3 -m pip install pygame
-  ```
+Install pygame with pip if you don’t have it:
+```bash
+python -m pip install pygame
 
-  If you use the included virtualenv (`.venv`), activate it first:
+📌 Notes & Tips
+Difficulty levels adjust AI speed, reaction delay, and precision — try different ones if the AI feels too easy or too hard.
 
-  ```bash
-  source .venv/bin/activate
-  ```
+Sound effects are included for paddle hits, scoring, and win/lose — you can replace the .wav files with your own for customization.
 
-  ## Run
+The win/lose screen shows when a player reaches the set score; you can tweak this logic in the code.
 
-  From the project root (where `pong_ai.py` is located):
+This project is intended as a learning/demo project; feel free to fork and add features like keyboard remapping, scoreboards, or online multiplayer.
 
-  ```bash
-  python3 pong_ai.py
-  ```
+## 📜 Source Reference
 
-  ## Notes & Tips
+This project is based on the original Pong AI by AbdulmalikAlq:  
+[https://github.com/AbdulmalikAlq/pong_ai](https://github.com/AbdulmalikAlq/pong_ai)
 
-  - The win score default can be changed in Settings; it's bounded between 1 and 50.
-  - If the AI feels too easy or too hard, try the other difficulty levels — they adjust AI speed, reaction delay and aiming error.
-  - This project is intended as a learning/demo project; feel free to fork and add features like sound, keyboard remapping, or two-player mode.
-
-  ## License
-
-  MIT-style; see repository for details.
+I reworked it with menus, difficulty selection, sound effects, and win/lose screens.
 
